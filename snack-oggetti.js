@@ -82,7 +82,7 @@ elemento dell'array ingredients "cheese" che viene sostituito in entrambi i casi
 Risposta: 
 
 Qui è stato usato structured clone che è in grado di creare deep copy degli oggetti, a tutti i livelli,
-mantenendo anche tutti i tipi di dati, come date, funzioni, simboli, in questo caso è stato creato in memoria il 
+mantenendo anche tutti i tipi di dati, come date, in questo caso è stato creato in memoria il 
 primo oggetto burger, che contiene altri 2 oggetti, quindi in totale 3 oggetti salvati nella prima variabile.
 poi la seconda variabile secondBurger e la terza variabile thirdBurger, contengono anche loro 3 oggetti, avendo fatto 
 copie profonde esatte con structured clone, quindi in totale: 9 oggetti.
