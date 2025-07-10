@@ -87,3 +87,36 @@ primo oggetto burger, che contiene altri 2 oggetti, quindi in totale 3 oggetti s
 poi la seconda variabile secondBurger e la terza variabile thirdBurger, contengono anche loro 3 oggetti, avendo fatto 
 copie profonde esatte con structured clone, quindi in totale: 9 oggetti.
 */
+
+
+// ✌️ Code Question 4
+
+{
+    const chef = {
+        name: "Chef Hyur",
+        age: 29,
+        makeBurger: (num = 1) => {
+            console.log(`Ecco ${num} hamburger per te!`);
+        },
+    }
+
+    const restaurant = {
+        name: "Hyur's Burgers",
+        address: {
+            street: 'Main Street',
+            number: 123,
+        },
+        openingDate: new Date(2025, 3, 11),
+        isOpen: false,
+    };
+}
+
+// Qual è il metodo migliore per clonare l’oggetto chef, e perché?
+// Qual è il metodo migliore per clonare l’oggetto restaurant, e perché?
+
+/*
+Risposta: 
+Per copiare la prima funzione la tecnica più ideale sarebbe los spread operator, dato che contiene una funzione
+copiabile solo dallo spread operator, e non si tratta di un oggetto troppo complesso, con un solo un ulteriore livello.
+mentre per la seconda funzione, l'ideale sarebbe structured clone, dato che contiene un tipo di dato speciale.
+*/
