@@ -1,13 +1,14 @@
 
-// 🏆 Code Question 1
+// 💪 Code Question 1
+{
+    const hamburger = { name: "Cheese Burger", weight: 250 };
+    const secondBurger = hamburger;
+    secondBurger.name = 'Double Cheese Burger';
+    secondBurger.weight = 500;
 
-const hamburger = { name: "Cheese Burger", weight: 250 };
-const secondBurger = hamburger;
-secondBurger.name = 'Double Cheese Burger';
-secondBurger.weight = 500;
-
-console.log(hamburger.name);
-console.log(secondBurger.name);
+    console.log(hamburger.name);
+    console.log(secondBurger.name);
+}
 
 // Senza lanciare il codice, riesci a prevedere cosa viene stampato in console?
 // Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice?
@@ -53,4 +54,36 @@ annidati, come l'array ingredients, che invece viene salvato come riferimento al
 Quindi qui viene creato l'oggetto burger, l'oggetto secondBurger, mentre quello che viene stampato in console è il primo
 elemento dell'array ingredients "cheese" che viene sostituito in entrambi i casi con "salad"
 
+*/
+
+// 😎 Code Question 3
+
+{
+    const hamburger = {
+        name: "Cheese Burger",
+        weight: 250,
+        maker: {
+            name: "Anonymous Chef",
+            restaurant: {
+                name: "Hyur's Burgers",
+                address: "Main Street, 123",
+                isOpen: true,
+            },
+            age: 29
+        }
+    };
+
+    const secondBurger = structuredClone(hamburger);
+    const thirdBurger = structuredClone(hamburger);
+}
+// Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice?
+
+/*
+Risposta: 
+
+Qui è stato usato structured clone che è in grado di creare deep copy degli oggetti, a tutti i livelli,
+mantenendo anche tutti i tipi di dati, come date, funzioni, simboli, in questo caso è stato creato in memoria il 
+primo oggetto burger, che contiene altri 2 oggetti, quindi in totale 3 oggetti salvati nella prima variabile.
+poi la seconda variabile secondBurger e la terza variabile thirdBurger, contengono anche loro 3 oggetti, avendo fatto 
+copie profonde esatte con structured clone, quindi in totale: 9 oggetti.
 */
